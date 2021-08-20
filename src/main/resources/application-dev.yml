@@ -1,0 +1,48 @@
+# 服务启动端口号(防止端口冲突)
+server:
+  # 防止端口冲突
+  port: 6666
+
+spring:
+  # 热部署
+  devtools:
+    restart:
+      enabled: true
+  # 页面禁用缓存
+  thymeleaf:
+    cache: false
+  freemarker:
+    cache: false
+  # 数据库链接
+  datasource:
+    url: jdbc:mysql://10.205.14.220:3306/statistics?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: tianyong
+    password: tianyong
+    driver-class-name: com.mysql.jdbc.Driver
+  # aop cglib
+  aop:
+    proxy-target-class: true
+  # spring-data-jpa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  # redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 200s # 超时时间
+    lettuce:
+      pool:
+        max-active: 200 #连接池最大连接数 (使用负值表示没有限制)
+        max-idle: 20 # 连接池中的最大空闲连接
+        min-idle: 5 #连接池中的最小空闲连接
+        max-wait: -1s # 连接池最大阻塞等待时间 (使用负值表示没有限制)
+
+# 日志级别
+debug: true
+
+# mybatis
+mybatis:
+  configuration:
+    call-setters-on-nulls: true

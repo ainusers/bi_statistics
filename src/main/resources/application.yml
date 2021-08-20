@@ -1,0 +1,5 @@
+
+# 区分不同环境配置文件（pro：线上、dev：开发）
+spring:
+  profiles:
+    active: dev

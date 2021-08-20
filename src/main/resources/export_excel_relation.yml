@@ -1,0 +1,3 @@
+# 映射关系：tableid-excel (entity类名/filename/title/sheetname)
+relations.contents.63=ReportsMonth,月度数据,月度数据,月度数据
+relations.contents.64=ReportsProductMonth,月度产品数据,月度产品数据,月度产品数据
